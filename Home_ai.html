@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parthib Sarma</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* Reset default margin/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Lexend', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: underline;
+  color: white;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+}
+
+.hi {
+  font-family: 'Playfair Display', serif;
+  font-size: 142px;
+  margin-right: 10px;
+}
+
+.its {
+  font-family: 'Great Vibes', cursive;
+  font-size: 142px;
+  margin-right: 10px;
+}
+
+.me {
+  font-family: 'Lexend', sans-serif;
+  font-size: 142px;
+  font-weight: 400;
+}
+
+.name {
+  font-family: 'Lexend', sans-serif;
+  font-size: 132px;
+  font-weight: 400;
+}
+
+.arrow {
+  margin-top: 50px;
+  font-size: 3rem;
+}
+/* smooth scroll behavior on all anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* rest of your previous styles here... */
+
+.arrow {
+  margin-top: 20px;
+  font-size: 130px;
+  text-decoration: none;
+  color: white;
+  animation: bounce 1.5s infinite;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+
+/* Simple target section for scrolling */
+.about-section {
+  background: #111;
+  color: white;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+/* ---------- ABOUT SECTION ---------- */
+
+.about-section {
+  background-color: #000;
+  color: white;
+  padding: 100px 5%;
+  font-family: 'Comic Neue', cursive;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+
+}
+
+.about-text {
+  flex: 1 1 55%;
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+.about-text h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  border-bottom: 4px solid white;
+  display: inline-block;
+}
+
+.about-text p {
+  margin-bottom: 25px;
+}
+
+.about-image {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.image-border {
+  border: 8px solid yellow;
+  padding: 10px;
+}
+
+.image-border img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+}
+
+/* ---------- CONNECT SECTION ---------- */
+
+.connect-section {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 100px 20px 80px;
+  font-family: 'Comic Neue', cursive;
+}
+
+.connect-section h2 {
+  font-size: 2.5rem;
+  border-bottom: 3px solid white;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+
+.connect-section .subtext {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+.social-icons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    word-break: break-word;
+  }
+
+  .hi, .its, .me, .name {
+    font-size: 2.5rem !important;
+    display: inline-block;
+  }
+
+  .about-text, .connect-section {
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+
+/* --- Hamburger Close Button --- */
+.close-icon {
+  font-size: 2rem;
+  color: white;
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  .nav-links.active + .close-icon {
+    display: block;
+  }
+
+ 
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero" id="home">
+    <h1>
+      <span class="hi">Hi !!!</span>
+      <span class="its">It's</span>
+      <span class="me">me,</span><br />
+      <span class="name">Parthib Sarma</span>
+    </h1>
+    <a href="#about" class="arrow">↓</a>
+  </main>
+
+  <section id="about" class="about-section">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>ABOUT</h2>
+        <p>Hi, I’m Parthib Sarma — a curious mind who would never quite fit into the mould of a “typical student.” While the classrooms buzzed with lectures and note-taking, I was the one lost in my own sweet world, wondering why the world behaves the way they do. After all, the world is a culmination of hundreds and thousands of human minds working together in reaction to each other.</p>
+        <p>I’ve never really enjoyed sitting through lectures or following textbooks, but give me something meaningful, and I'm all in, already forgotten everything else in the world. From basic programming to robotics, spirituality to geopolitics and human psychology, I have dipped my hands into everything. Among these, Art has been one of the major driving forces of my life. Whether it's adorning myself in style or the art of communicating with people, or even paying attention to a luxurious timepiece. This attention has been all over. Not to mention, this drive had also led me to winning many art competitions, including a city-level one. 😅😋</p>
+        <p>I also had a keen interest in technology from my childhood. From AIs to LLMs, to quantum computing, you name it. Maybe even this weird combination led me to build this website. After all, could art and technology had a better love story than this ?😜</p>
+        <p>I’m the kind of person who’s always looking forward, instead of backwards. While the past has its lessons, it’s the future that truly excites me. Ideas, possibilities, what could be—that’s where my mind loves to wander. Because there is no point in being sad about your marks when curiosity drives your way.</p>
+        <p>Today, after spending almost two decades of my life driving this path. I’m willing to channelise all this curiosity by writing blogs, mostly as a way to make sense of my thoughts and hopefully connect with others who find weird things interesting too. So if you have ideas to share, questions to ask, or just want to chat about anything from fashion to philosophy to finely crafted timepieces, or even to some newly developed technology, feel free to reach out to me. I might be a bit quiet at first, but once you click, expect my never-ending talks that may run all night. 😄⌚</p>
+      </div>
+      <div class="about-image">
+        <div class="image-border">
+          <img src="https://drive.google.com/file/d/14DyuzligMhheMWroJc7Vyw-skwXDr-6U/view?usp=drivesdk" alt="Parthib Sarma" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="connect-section">
+    <h2>Feel Free to Connect With Me 🤗</h2>
+    <p class="subtext">You can connect me on</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/parthib_sarma?igsh=ZzdrY2hoY2ZsY3Zs" target="_blank" title="Instagram"><img src="https://static.wixstatic.com/media/11062b_55e4be1e75564866b6c28290f9a9d271~mv2.png/v1/fill/w_68,h_68,lg_1/11062b_55e4be1e75564866b6c28290f9a9d271~mv2.png" alt="Instagram Icon" alt="Instagram Icon" /></a>
+
+      <a href="https://x.com/HelloBuddy15595" target="_blank" title="X"><img src="https://static.wixstatic.com/media/11062b_17de014191ff44cab04a7676fe612204~mv2.png/v1/fill/w_68,h_68,lg_1/11062b_17de014191ff44cab04a7676fe612204~mv2.png" alt="X Icon" /></a>
+
+      <a href="http://www.linkedin.com/in/parthib-sarma123" target="_blank" title="LinkedIn"><img src="https://static.wixstatic.com/media/11062b_9e78da3320da497ab23ce28d738d388a~mv2.png/v1/fill/w_68,h_68,lg_1/11062b_9e78da3320da497ab23ce28d738d388a~mv2.png" alt="LinkedIn Icon" /></a>
+
+      <a href="https://mastodon.social/@Mastradon" target="_blank" title="Mastodon"><img src="https://static.wixstatic.com/media/11959e_cf6b9f19a0474e3b9cb11b24f514b981~mv2.png/v1/fill/w_68,h_68,lg_1/11959e_cf6b9f19a0474e3b9cb11b24f514b981~mv2.png" alt="Mastodon Icon" alt="Mastodon Icon" /></a>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  const closeIcon = document.getElementById('close-icon');
+
+  function toggleMenu() {
+    navLinks.classList.toggle('active');
+    hamburger.style.display = navLinks.classList.contains('active') ? 'none' : 'block';
+    closeIcon.style.display = navLinks.classList.contains('active') ? 'block' : 'none';
+  }
+
+  hamburger.addEventListener('click', toggleMenu);
+  closeIcon.addEventListener('click', toggleMenu);
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    });
+  });
+</script>
+
+    </div>
+  </section>
+</body>
+</html>
+
+
+
